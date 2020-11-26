@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
     tools:context=".InputActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:textSize="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="학생 입력"/>
+
+    <EditText
+        android:id="@+id/inHakbun"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:hint="학생 번호"/>
+
+    <EditText
+        android:id="@+id/inId"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:hint="사진 번호"/>
+
+    <EditText
+        android:id="@+id/inName"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:hint="학생 이름"/>
+    <EditText
+        android:id="@+id/inDept"
+        android:layout_width="250dp"
+        android:layout_margin="5dp"
+        android:layout_height="60dp"
+        android:hint="학생 전공"/>
+
+    <EditText
+        android:id="@+id/inHdong1"
+        android:layout_width="250dp"
+        android:layout_margin="5dp"
+        android:layout_height="60dp"
+        android:hint="학생 활동 1"/>
+
+    <EditText
+        android:id="@+id/inHdong2"
+        android:layout_width="250dp"
+        android:layout_margin="5dp"
+        android:layout_height="60dp"
+        android:hint="학생 활동 2"/>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="100dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="완료"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:backgroundTint="@color/black"
+        android:layout_height="60dp"/>
+
+</LinearLayout>

@@ -24,11 +24,11 @@ class ListViewAdapter(var studentList : ArrayList<StudentE>) : BaseAdapter() {
             rowItemView = View.inflate(parent?.context, R.layout.listitem, null)
         }
         val student = studentList[position]
-        var imageResId =  parent!!.resources.getIdentifier("kr.hs.mirim.customlistview:" + "drawable/" + student.sajin, null, null)
+        var imageResId =  parent!!.resources.getIdentifier("kr.hs.emirim.cho.pj_student:" + "drawable/" + student.sajin, null, null)
         rowItemView!!.itemImage.setImageResource(imageResId)
         rowItemView!!.itemTitle.text = student.name
         rowItemView!!.major.text = student.dept
-        rowItemView!!.hakbun.text = student.hb.toString()
+        rowItemView!!.hakbun.text = student.hb
         return rowItemView
     }
 

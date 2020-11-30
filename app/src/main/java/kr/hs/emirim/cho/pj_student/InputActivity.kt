@@ -34,16 +34,18 @@ class InputActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)
-        menu!!.add(0, 1, 0, "학생 목록")
+        menu!!.add(0, 1, 0, "학생 입력")
         menu!!.add(0, 2, 0, "학생 수정")
         menu!!.add(0, 3, 0, "학생 삭제")
+        menu!!.add(0, 4, 0, "학생 검색")
+        menu!!.add(0, 5, 0, "메인")
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             1 -> {
-                var inIntent = Intent(applicationContext, MainActivity::class.java)
+                var inIntent = Intent(applicationContext, InputActivity::class.java)
                 startActivity(inIntent)
                 return true
             }
@@ -55,6 +57,16 @@ class InputActivity : AppCompatActivity() {
             3 -> {
                 var deIntent = Intent(applicationContext, DeleteActivity::class.java)
                 startActivity(deIntent)
+                return true
+            }
+            4->{
+                var seIntent = Intent(applicationContext, SearchActivity::class.java)
+                startActivity(seIntent)
+                return true
+            }
+            5->{
+                var mainIntent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(mainIntent)
                 return true
             }
         }

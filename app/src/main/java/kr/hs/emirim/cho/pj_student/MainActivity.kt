@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         menu!!.add(0, 1, 0, "학생 입력")
         menu!!.add(0, 2, 0, "학생 수정")
         menu!!.add(0, 3, 0, "학생 삭제")
+        menu!!.add(0, 4, 0, "학생 검색")
         return true
     }
 
@@ -61,6 +62,11 @@ class MainActivity : AppCompatActivity() {
             3 -> {
                 var deIntent = Intent(applicationContext, DeleteActivity::class.java)
                 startActivity(deIntent)
+                return true
+            }
+            4->{
+                var seIntent = Intent(applicationContext, SearchActivity::class.java)
+                startActivity(seIntent)
                 return true
             }
         }
